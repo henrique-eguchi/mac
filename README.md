@@ -1,5 +1,5 @@
 # macOs High Sierra v10.13 Setup
-My basic list of instructions to make setting up an Apple computer for ios development (based on Tania Rascia setup)
+My basic list of instructions to make setting up an Apple computer for ios development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
 ## Preferences
 
