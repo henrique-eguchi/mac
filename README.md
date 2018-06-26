@@ -150,8 +150,10 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git
 
 ### Programs that I will probably test
 CodeKit (Front End Toolbox)
+
 Tower (Git Manager)
-Transmit (The best FTP program ever made)
+
+Transmit (FTP program)
 
 
 # Android Development Environment
