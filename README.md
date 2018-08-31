@@ -80,6 +80,39 @@ mas 'Xcode', id: 497799835
 # Firefox Developer Edition
 ```
 
+## Xcode configurations (optional)
+### Track build time in Xcode
+```shell
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+```
+### Improve your Swift project build time
+```shell
+defaults write com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsExclusively -bool NO
+```
+### Use Simulator in full-screen mode with Xcode
+```shell
+defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
+```
+### Enable more secret features in Simulator using Apple hidden Internals menu
+Create an empty folder with name “AppleInternal” in the root directory. Just run this command below and restart Simulator
+```shell
+sudo mkdir /AppleInternal
+```
+### Capture iOS Simulator video
+```shell
+xcrun simctl io booted recordVideo <filename>.<file extension>
+```
+Press control + c to stop recording the video. The default location for the created file is the current directory
+### Use your fingerprint to sudo
+Edit /etc/pam.d/sudo and add the following line to the top
+```shell
+auth sufficient pam_tid.so
+```
+### Remove unavailable simulators from Xcode
+```shell
+xcrun simctl delete unavailable
+```
+
 ## GitHub
 
 ### Config - `~/.gitconfig`
