@@ -166,7 +166,10 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 touch ~/.bash_profile; nano ~/.bash_profile
 
 ```shell
+PS1='$(networksetup -getcomputername):\W \u\$ '
+
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+export EDITOR="code -w"
 ```
 
 ```shell
