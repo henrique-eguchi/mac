@@ -78,6 +78,9 @@ mas 'Xcode', id: 497799835
 
 ## Applications that are not installable by cask
 # Firefox Developer Edition
+# OneDrive
+# Office
+# Microsoft Remote Desktop
 ```
 
 ## Xcode configurations (optional)
