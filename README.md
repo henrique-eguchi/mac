@@ -83,6 +83,10 @@ mas 'Xcode', id: 497799835
 # Microsoft Remote Desktop
 ```
 
+```shell
+brew bundle
+```
+
 ## Xcode configurations (optional)
 ### Track build time in Xcode
 ```shell
