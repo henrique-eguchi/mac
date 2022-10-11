@@ -188,10 +188,3 @@ parse_git_branch() {
 }
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\$(parse_git_branch)\[\033[m\]\$ "
 ```
-
-### Programs that I will probably test
-CodeKit (Front End Toolbox)
-
-Tower (Git Manager)
-
-Transmit (FTP program)
