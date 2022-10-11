@@ -1,14 +1,16 @@
-# macOs High Sierra v10.13 Setup
-My basic list of instructions to make setting up an Apple computer for ios and android development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
+# macOs Setup
+My basic list of instructions to make setting up an Apple computer for iOS development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
-## Preferences
+## System Preferences
 
-- **Trackpad > Point & Click > Tap to click >** On
-- **Keyboard > Text >** Disable "Correct spelling automatically".
-- **Security and Privacy > Firewall >** On
-- **Security and Privacy > General >** App Store and identified developers
-- **File Sharing >** Off
-- **Users & Groups > Login Items >** Spectacle
+- Trackpad > Point & Click > Tap to click > On
+- Keyboard > Text > Disable "Correct spelling automatically".
+- Security and Privacy > Firewall > On
+- Security and Privacy > General > App Store and identified developers
+- Sharing > File Sharing > Off
+- Users & Groups > Login Items > Spectacle / AlDente
+
+## Finder
 
 ### Show Library folder
 
@@ -64,10 +66,8 @@ touch Brewfile
 ```shell
 tap 'caskroom/cask'
 
-brew 'git' #version control
-brew 'npm'
+brew 'git'
 
-cask 'firefox'
 cask 'google-chrome'
 cask 'spectacle'
 cask 'visual-studio-code'
@@ -77,10 +77,8 @@ cask 'visual-studio-code'
 mas 'Xcode', id: 497799835
 
 ## Applications that are not installable by cask
-# Firefox Developer Edition
 # OneDrive
 # Office
-# Microsoft Remote Desktop
 ```
 
 ```shell
@@ -197,108 +195,3 @@ CodeKit (Front End Toolbox)
 Tower (Git Manager)
 
 Transmit (FTP program)
-
-
-# Android Development Environment
-
-### Brewfile
-```bash
-brew cask install java # /Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/ 
-# In case of other version of java:
-# brew cask install java7 # /Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/ 
-# brew cask install java6 # /Library/Java/JavaVirtualMachines/jdk1.6.0_65.jdk/Contents/Home/
-brew install jenv # To configure java installations easily
-```
-
-## Bash
-
-### Config - `~/.bash_profile`
-
-To configure jenv, add this to the .bash_profile file
-
-```bash
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-```
-
-## jenv configuration
-
-Reinitialize terminal and then run the following commands:
-
-```bash
-jenv add /Library/Java/JavaVirtualMachines/jdk1.6.0_65.jdk/Contents/Home/
-jenv add /Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
-jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/
-```
-
-The following command will show all registered versions:
-
-```bash
-jenv versions
-```
-
-Tell which jdk version is the main:
-
-```bash
-jenv global oracle64-1.8.0.102
-java -version #test it!
-```
-
-## Gradle
-
-### sdkman (sdk package manager)
-
-```bash
-curl -s "https://get.sdkman.io" | bash
-```
-
-And then:
-
-```bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk version
-```
-
-### Gradle installation
-
-```bash
-sdk install gradle
-gradle -v
-```
-
-### Gradle configuration
-
-```bash
-touch ~/.gradle/gradle.properties
-# insert the following:
-echo 'org.gradle.daemon=true' >> ~/.gradle/gradle.properties
-echo 'org.gradle.parallel=true' >> ~/.gradle/gradle.properties
-echo 'org.gradle.jvmargs=-Xmx2048M' >> ~/.gradle/gradle.properties
-```
-
-## Android Studio
-
-### Brewfile
-
-```bash
-brew cask install android-studio
-```
-
-### Android Studio configuration
-
-```bash
-vi /Applications/Android\ Studio.app/Contents/bin/studio.vmoptions
-# insert the following:
--Xms2048m
--Xmx3072m
--XX:MaxPermSize=512m
--XX:ReservedCodeCacheSize=512m
--XX:+UseCompressedOops
-```
-
-Open the Android Studio and then configure it to use the Gradle:
-
-Android Studio > Preferences > Build, Execution, Deployment > Gradle
-
-Set the path to the GRADLE_HOME environment variable, generally at the user root folder:
-
-/Users/<user>/.sdkman/candidates/gradle/current
