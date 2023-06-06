@@ -72,13 +72,16 @@ cask 'google-chrome'
 cask 'spectacle'
 cask 'visual-studio-code'
 
-# mas 'Slack', id: 803453959
-# mas 'Sip', id: 507257563 ##paid
+mas 'Slack', id: 803453959
 mas 'Xcode', id: 497799835
 
 ## Applications that are not installable by cask
+# AlDente
+# Notion
 # OneDrive
 # Office
+# Proxyman
+# Spotify
 ```
 
 ```shell
