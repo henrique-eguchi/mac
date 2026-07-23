@@ -2,14 +2,37 @@
 
 Instructions to set up a Mac for development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
-## System Preferences
+## Settings
 
-- Trackpad > Point & Click > Tap to click > On
-- Keyboard > Text > Disable "Correct spelling automatically".
-- Security and Privacy > Firewall > On
-- Security and Privacy > General > App Store and identified developers
-- Sharing > File Sharing > Off
-- Users & Groups > Login Items > AlDente
+### Trackpad
+
+- Point & Click -> Tap to click -> On
+
+### Keyboard
+
+- Key Repeat -> Fast
+- Delay Until Repeat -> Short
+- Disable "Correct spelling automatically"
+- Disable "Capitalize words automatically"
+- Disable "Add period with double-space"
+- Disable "Use smart quotes and dashes"
+
+### Network
+
+- Firewall -> On
+
+### Privacy & Security
+
+- Allow applications from -> App Store & Known Developers
+
+### Sharing
+
+- File Sharing -> Off
+
+### Login Items & Extensions
+
+- AlDente
+
 
 ## Finder
 
