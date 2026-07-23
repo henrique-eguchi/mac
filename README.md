@@ -1,5 +1,6 @@
-# macOs Setup
-My basic list of instructions to make setting up an Apple computer for iOS development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
+# macOS Setup
+
+Instructions to set up a Mac for development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
 ## System Preferences
 
@@ -8,7 +9,7 @@ My basic list of instructions to make setting up an Apple computer for iOS devel
 - Security and Privacy > Firewall > On
 - Security and Privacy > General > App Store and identified developers
 - Sharing > File Sharing > Off
-- Users & Groups > Login Items > Spectacle / AlDente
+- Users & Groups > Login Items > AlDente
 
 ## Finder
 
@@ -39,53 +40,41 @@ defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 ## Homebrew
-For managing operating system libraries.
+Package manager for operating system libraries and applications.
 
 ```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Mac App Store (command-line)
+### Git
 
-```shell
-brew install mas
+```bash
+brew install git
 ```
 
-#### Sign in
+### GUI Applications
 
 ```shell
-mas signin email@email.com
+brew install --cask \
+visual-studio-code \
+google-chrome \
+discord \
+slack \
+spotify \
+notion \
+aldente \
+proxyman \
+bruno \
+ghostty \
+vlc \
+balenaetcher \
+obs
 ```
 
-### Brewfile
+### Misc
 
 ```shell
-touch Brewfile
-```
-
-```shell
-tap 'caskroom/cask'
-
-brew 'git'
-
-cask 'google-chrome'
-cask 'spectacle'
-cask 'visual-studio-code'
-
-mas 'Slack', id: 803453959
-mas 'Xcode', id: 497799835
-
-## Applications that are not installable by cask
-# AlDente
-# Notion
-# OneDrive
-# Office
-# Proxyman
-# Spotify
-```
-
-```shell
-brew bundle
+brew install blackhole-2ch
 ```
 
 ## Xcode configurations (optional)
