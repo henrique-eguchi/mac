@@ -39,6 +39,12 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
+## Xcode
+
+Install Xcode directly from App Store.
+
+> If you just need compilers and unix-style utilities required for everyday development tasks, including running version control, compiling code, and using package managers like Homebrew and you don't need the full Xcode app, install the Xcode Command Line Tools by running `xcode-select --install`
+
 ## Homebrew
 Package manager for operating system libraries and applications.
 
@@ -48,9 +54,7 @@ Package manager for operating system libraries and applications.
 
 ### Git
 
-```bash
-brew install git
-```
+Git is already installed with either Xcode or just the Xcode Command Line Tools.
 
 ### GUI Applications
 
