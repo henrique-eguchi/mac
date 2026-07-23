@@ -16,6 +16,8 @@ Instructions to set up a Mac for development (based on [Tania Rascia setup](http
 - Disable "Capitalize words automatically"
 - Disable "Add period with double-space"
 - Disable "Use smart quotes and dashes"
+- Function Keys -> Enable "Use F1, F2, etc. keys as standard function keys"
+- Modifier Keys -> "Caps Lock key" -> Select "Escape"
 
 ### Network
 
