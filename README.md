@@ -2,7 +2,49 @@
 
 Instructions to set up a Mac for development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
-## Settings
+## Xcode
+
+Install Xcode directly from App Store.
+
+> If you just need compilers and unix-style utilities required for everyday development tasks, including running version control, compiling code, and using package managers like Homebrew and you don't need the full Xcode app, install the Xcode Command Line Tools by running `xcode-select --install`
+
+## Homebrew
+Package manager for operating system libraries and applications.
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Git
+
+Git is already installed with either Xcode or just the Xcode Command Line Tools.
+
+### GUI Applications
+
+```shell
+brew install --cask \
+visual-studio-code \
+google-chrome \
+discord \
+slack \
+spotify \
+notion \
+aldente \
+proxyman \
+bruno \
+ghostty \
+vlc \
+balenaetcher \
+obs
+```
+
+### Misc
+
+```shell
+brew install blackhole-2ch
+```
+
+## macOS Settings
 
 ### Trackpad
 
@@ -64,49 +106,12 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-## Xcode
-
-Install Xcode directly from App Store.
-
-> If you just need compilers and unix-style utilities required for everyday development tasks, including running version control, compiling code, and using package managers like Homebrew and you don't need the full Xcode app, install the Xcode Command Line Tools by running `xcode-select --install`
-
-## Homebrew
-Package manager for operating system libraries and applications.
-
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### Git
-
-Git is already installed with either Xcode or just the Xcode Command Line Tools.
-
-### GUI Applications
-
-```shell
-brew install --cask \
-visual-studio-code \
-google-chrome \
-discord \
-slack \
-spotify \
-notion \
-aldente \
-proxyman \
-bruno \
-ghostty \
-vlc \
-balenaetcher \
-obs
-```
-
-### Misc
-
-```shell
-brew install blackhole-2ch
-```
-
 ## Xcode configurations (optional)
+
+### Shortcuts
+
+- Settings -> Navigation -> Navigation -> With Option & Shift -> Uses Destination Chooser (CMD + OPT + SHIFT + Click)
+
 ### Track build time in Xcode
 ```shell
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
