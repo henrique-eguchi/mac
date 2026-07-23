@@ -23,7 +23,7 @@ Git is already installed with either Xcode or just the Xcode Command Line Tools.
 
 ```shell
 brew install --cask \
-visual-studio-code \
+vscodium \ # visual-studio-code without telemetry/tracking
 google-chrome \
 discord \
 slack \
