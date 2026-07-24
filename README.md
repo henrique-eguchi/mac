@@ -2,13 +2,15 @@
 
 Instructions to set up a Mac for development (based on [Tania Rascia setup](https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/))
 
-## Xcode
+## Installation
+
+### Xcode
 
 Install Xcode directly from App Store.
 
 > If you just need compilers and unix-style utilities required for everyday development tasks, including running version control, compiling code, and using package managers like Homebrew and you don't need the full Xcode app, install the Xcode Command Line Tools by running `xcode-select --install`
 
-## Homebrew
+### Homebrew
 Package manager for operating system libraries and applications.
 
 ```shell
@@ -44,14 +46,15 @@ obs
 brew install blackhole-2ch
 ```
 
+## Configuration
 
-## Git
+### Git
 
 ```shell
 touch ~/.gitconfig
 ```
 
-### Config - `~/.gitconfig`
+#### Config - `~/.gitconfig`
 
 
 ```shell
@@ -78,9 +81,9 @@ touch ~/.gitconfig
 ```
 
 
-## SSH
+### SSH
 
-### Config - `~./ssh/config`
+#### Config - `~./ssh/config`
 
 ```shell
 Host example
@@ -89,19 +92,19 @@ Host example
     IdentityFile key.pem
 ```
 
-### Generate SSH key
+#### Generate SSH key
 
 ```shell
 ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
-## macOS Settings
+### macOS Settings
 
-### Trackpad
+#### Trackpad
 
 - Point & Click -> Tap to click -> On
 
-### Keyboard
+#### Keyboard
 
 - Key Repeat -> Fast
 - Delay Until Repeat -> Short
@@ -112,37 +115,37 @@ ssh-keygen -t rsa -b 4096 -C "email@email.com"
 - Function Keys -> Enable "Use F1, F2, etc. keys as standard function keys"
 - Modifier Keys -> "Caps Lock key" -> Select "Escape"
 
-### Network
+#### Network
 
 - Firewall -> On
 
-### Privacy & Security
+#### Privacy & Security
 
 - Allow applications from -> App Store & Known Developers
 
-### Sharing
+#### Sharing
 
 - File Sharing -> Off
 
-### Login Items & Extensions
+#### Login Items & Extensions
 
 - AlDente
 
-### Dock
+#### Dock
 
 - Enable "Automatically hide and show Dock
 - Enable "Show indicators for open applications"
 
 
-## Finder
+### Finder
 
-### Show Library folder
+#### Show Library folder
 
 ```shell
 chflags nohidden ~/Library
 ```
 
-### Show hidden files
+#### Show hidden files
 
 This can also be done by pressing `command` + `shift` + `.`.
 
@@ -150,55 +153,57 @@ This can also be done by pressing `command` + `shift` + `.`.
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
-### Show path bar
+#### Show path bar
 
 ```shell
 defaults write com.apple.finder ShowPathbar -bool true
 ```
 
-### Show status bar
+#### Show status bar
 
 ```shell
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-## Xcode configurations (optional)
+### Xcode configurations (optional)
 
-### Shortcuts
+#### Shortcuts
 
 - Settings -> Navigation -> Navigation -> With Option & Shift -> Uses Destination Chooser (CMD + OPT + SHIFT + Click)
 
-### Track build time in Xcode
+#### Track build time in Xcode
 ```shell
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 ```
-### Improve your Swift project build time
+#### Improve your Swift project build time
 ```shell
 defaults write com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsExclusively -bool NO
 ```
-### Use Simulator in full-screen mode with Xcode
+#### Use Simulator in full-screen mode with Xcode
 ```shell
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 ```
-### Enable more secret features in Simulator using Apple hidden Internals menu
+#### Enable more secret features in Simulator using Apple hidden Internals menu
 Create an empty folder with name “AppleInternal” in the root directory. Just run this command below and restart Simulator
 ```shell
 sudo mkdir /AppleInternal
 ```
-### Capture iOS Simulator video
+#### Capture iOS Simulator video
 ```shell
 xcrun simctl io booted recordVideo <filename>.<file extension>
 ```
 Press control + c to stop recording the video. The default location for the created file is the current directory
-### Use your fingerprint to sudo
+#### Use your fingerprint to sudo
 Edit /etc/pam.d/sudo and add the following line to the top
 ```shell
 auth sufficient pam_tid.so
 ```
-### Remove unavailable simulators from Xcode
+#### Remove unavailable simulators from Xcode
 ```shell
 xcrun simctl delete unavailable
 ```
+
+
 
 ## Bash
 
