@@ -44,6 +44,57 @@ obs
 brew install blackhole-2ch
 ```
 
+
+## Git
+
+```shell
+touch ~/.gitconfig
+```
+
+### Config - `~/.gitconfig`
+
+
+```shell
+[user]
+	name   = First Last
+	email  = email@email.com
+[github]
+	user   = username
+[alias]
+	a      = add
+    cm     = commit -m
+	ca     = commit -a
+	cam    = commit -am
+	s      = status
+	p      = push
+    co     = checkout
+	cob    = checkout -b
+    fp     = fetch --prune --all
+    l      = log --oneline --decorate --graph
+[push]
+	autoSetupRemote = true
+[credential]
+	helper = osxkeychain
+```
+
+
+## SSH
+
+### Config - `~./ssh/config`
+
+```shell
+Host example
+    HostName example.com
+    User example-user
+    IdentityFile key.pem
+```
+
+### Generate SSH key
+
+```shell
+ssh-keygen -t rsa -b 4096 -C "email@email.com"
+```
+
 ## macOS Settings
 
 ### Trackpad
@@ -76,6 +127,11 @@ brew install blackhole-2ch
 ### Login Items & Extensions
 
 - AlDente
+
+### Dock
+
+- Enable "Automatically hide and show Dock
+- Enable "Show indicators for open applications"
 
 
 ## Finder
@@ -142,49 +198,6 @@ auth sufficient pam_tid.so
 ### Remove unavailable simulators from Xcode
 ```shell
 xcrun simctl delete unavailable
-```
-
-## GitHub
-
-### Config - `~/.gitconfig`
-
-
-```shell
-[user]
-	name = First Last
-	email = email@email.com
-[github]
-	user = username
-[alias]
-	a = add
-	ca = commit -a
-	cam = commit -am
-	s = status
-	pom = push origin master
-	pog = push origin gh-pages
-	puom = pull origin master
-	puog = pull origin gh-pages
-	cob = checkout -b
-[credential]
-	helper = osxkeychain
-```
-
-
-## SSH
-
-### Config - `~./ssh/config`
-
-```shell
-Host example
-    HostName example.com
-    User example-user
-    IdentityFile key.pem
-```
-
-### Generate SSH key
-
-```shell
-ssh-keygen -t rsa -b 4096 -C "email@email.com"
 ```
 
 ## Bash
